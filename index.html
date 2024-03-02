@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <title>Vite + React</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <img className="avatar" />
+    <div class="Profile"></div>
+ 
+
+    <script type="module" src="/src/main.jsx"></script>
+   
+    <script  >
+
+      const user = {
+        name: 'Hedy Lamarr',
+        imageUrl: 'https://i.imgur.com/yXOvdOSs.jpg',
+        imageSize: 90,
+      };
+      
+       function Profile() {
+        const user = {
+          name: 'Hedy Lamarr',
+          imageUrl: 'https://i.imgur.com/yXOvdOSs.jpg',
+          imageSize: 90,
+        };
+        return (
+          <>
+            <h1>{user.name}</h1>
+            <img
+              className="avatar"
+              src={user.imageUrl}
+              alt={'Photo of ' + user.name}
+              style={{
+                width: user.imageSize,
+                height: user.imageSize
+              }}
+            />
+          </>
+        );
+      };
+      export default Profile;
+    </script>
+  </body>
+</html>
